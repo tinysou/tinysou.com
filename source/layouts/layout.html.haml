@@ -25,10 +25,12 @@
   = javascript_include_tag "application"
 
 %body
-  .off-canvas-wrap
+  .off-canvas-wrap{:'data-offcanvas' => true}
     .inner-wrap
       = partial "layouts/nav.cn"
+
       = yield
+
       .tiny-footer
         .row
           .large-8.columns
@@ -40,6 +42,8 @@
           .large-4.columns
             %p
               %small 南京自由风暴有限公司
-
-
+  :javascript
+    $(document).ready(function () {
+      $(document).foundation();
+    });
 </html>
