@@ -1187,4 +1187,5 @@ $topbar-link-bg-active-hover: #292929;
 
 // $include-html-visibility-classes: $include-html-classes;
 
-@import 'foundation';
+@import 'foundation/scss/foundation';
+@import "foundation/scss/normalize";
