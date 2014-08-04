@@ -1,0 +1,9 @@
+{
+  "name": "dotide.com",
+  "version": "0.0.1",
+  "dependencies": {
+    "jquery": ">= 1.9.0",
+    "foundation": "~5.2.1"
+  },
+  "private": true
+}
