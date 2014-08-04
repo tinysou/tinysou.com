@@ -28,9 +28,18 @@
   .off-canvas-wrap
     .inner-wrap
       = partial "layouts/nav.cn"
-      / Main page container
       = yield
-      / Footer
-      = partial "layouts/footer.cn"
+      .tiny-footer
+        .row
+          .large-8.columns
+            %ul.inline-list
+              %li
+                %a.reverse{href: 'http://dotide.com'}= "© #{Date.today.year} Tinysou"
+              %li
+                %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
+          .large-4.columns
+            %p
+              %small 南京自由风暴有限公司
+
 
 </html>
