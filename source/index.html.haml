@@ -1,0 +1,114 @@
+---
+title: TinySou
+---
+
+.brand
+  .wrap
+    .row
+      .large-12.columns
+        %h2.text-center 微搜索
+        %p.text-center 最好用的站内搜索引擎
+    %br
+    .row
+      .large-8.large-centered.columns
+        %form.row.collapse
+          .large-9.columns
+            %input#st-search-input{type: 'text', placeholder: '输入要搜索的内容：'}
+          .large-3.columns
+            %input.button{type: 'submit', value: '搜索'}
+    .row
+      .large-12.columns
+        %ul.small-block-grid-3
+          %li.text-center
+            = image_tag 'brand1.png'
+            %p 跨站搜索
+          %li.text-center
+            = image_tag 'brand2.png'
+            %p 自动补全
+          %li.text-center
+            = image_tag 'brand3.png'
+            %p 安装简单
+
+  %br
+.steps
+  .step-title.wrap.white-bg
+    .row
+      .large-12.columns
+        %h2 简单4步，给你的站点添加微搜索功能
+        %br
+      %hr
+    .row
+      .large-12.columns
+        %div{'data-magellan-expedition' => 'fixed'}
+          %dl.sub-nav
+            %dd{:'data-magellan-arrival' => 'step1'}
+              %a{:href => "#step1"} 1. 注册，登录
+            %dd{:'data-magellan-arrival' => 'step2'}
+              %a{:href => "#step2"} 2. 创建搜索引擎
+            %dd{:'data-magellan-arrival' => 'step3'}
+              %a{:href => "#step3"} 3. 添加域名
+            %dd{:'data-magellan-arrival' => 'step4'}
+              %a{:href => "#step4"} 4. 安装
+  .step.wrap.white-bg
+    .row
+      .large-12.columns
+        %a{:name => "step1"}
+        %h3{'data-magellan-destination' => 'step1'}
+          .label 1
+          注册，登录
+        = image_tag 'step1.png'
+  .step.wrap.gray-bg
+    .row
+      .large-12.columns
+        %a{:name => "step2"}
+        %h3{'data-magellan-destination' => 'step2'}
+          .label 2
+          创建搜索引擎
+        %br
+        = image_tag 'step2.png'
+  .step.wrap.white-bg
+    .row
+      .large-12.columns
+        %a{:name => "step3"}
+        %h3{'data-magellan-destination' => 'step3'}
+          .label 3
+          添加域名
+        = image_tag 'step3.png'
+  .step.wrap.gray-bg
+    .row
+      .large-12.columns
+        %a{:name => "step4"}
+        %h3{'data-magellan-destination' => 'step4'}
+          .label 4
+          安装
+        = image_tag 'step4.png'
+
+%script{type: 'text/javascript', src: "http://yuetai.wendycan.org/tinysou-no-jq.min.js"}
+<link type='text/css' rel='stylesheet' href="http://yuetai.wendycan.org/tinysou.min.css" media='all' />
+
+:javascript
+  $(document).ready(function () {
+    var resultTemplate = Hogan.compile('<div class="st-result"><h3 class="title"><a href="{{url}}" class="st-search-result-link">{{title}}</a></h3><div class="st-metadata"><span class="st-snippet">{{{body}}}</span></div></div>')
+    var customRenderer = function(documentType, item) {
+      var data = {
+        title: item['title'],
+        url: item['url'],
+        body: item.highlight['body'] || item['body'].substring(0, 300)
+      };
+      return resultTemplate.render(data);
+    };
+    var customRenderActFunction = function(document_type, item) {
+      var out = '<p class="title">' + item['title'] + '</p>';
+      out = out.concat('<p class="url">' + item['sections'][0] + '</p>');
+      return out;
+    };
+    $('#st-search-input').tinysouSearch({
+      // resultContainingElement: '#st-results-container',
+      engineKey: '4-1kQC3Ly9j4isC9vDwd',
+      renderFunction: customRenderer,
+      perPage: 4,
+      // renderStyle: 'new_page',
+      // resultPageURL: '/site/search',
+      renderActFunction: customRenderActFunction
+    });
+  })

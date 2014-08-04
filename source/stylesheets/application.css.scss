@@ -1,0 +1,29 @@
+// Main css
+@import "main/variables";
+@import "main/framework";
+@import "main/mixins";
+@import "main/fonts";
+@import "main/layout";
+@import "main/home";
+
+/**
+ * Generic css (forms, nav etc):
+ */
+@import "generic/alert";
+@import "generic/buttons";
+@import "generic/forms";
+@import "generic/links";
+@import "generic/typography";
+@import "generic/table";
+
+/**
+ * Page specific styles:
+ */
+@import "sections/nav";
+@import "sections/footer";
+@import "sections/sidebar";
+
+/**
+  * Vendor
+ */
+@import "font-awesome";

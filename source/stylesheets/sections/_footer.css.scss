@@ -1,0 +1,24 @@
+.tiny-footer{
+  margin-top: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  a{
+    font-size: 12px;
+  }
+  .fa{
+    font-size: 16px;
+  }
+  ul{
+    margin: 0;
+    li{
+      margin-left: 0;
+      margin-bottom: 5px;
+    }
+  }
+  .large-4{
+    text-align: right;
+    a.reverse{
+      padding-right: 5px;
+    }
+  }
+}
