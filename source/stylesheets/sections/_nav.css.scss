@@ -1,0 +1,99 @@
+.top-bar{
+  a{
+    font-weight: bold !important;
+  }
+  .title-area{
+    a{
+      color: white;
+      font-size: 18px;
+      font-weight: 200;
+      img{
+        height: 50px;
+        width: auto;
+        margin-top: -10px;
+      }
+      &:hover{
+        opacity: 0.8;
+      }
+      line-height: 65px;
+      padding-left: 30px;
+    }
+  }
+  .dropdown{
+    border-top: solid 3px $primary;
+    box-shadow: 0 5px 10px $gray-bg;
+    li{
+      text-align: center;
+      a{
+        color: white !important;
+      }
+    }
+    a{
+      line-height: 35px !important;
+      font-weight: normal !important;
+      font-size: 14px;
+    }
+  }
+}
+.small-nav{
+  img{
+    height: 30px;
+  }
+  .fa-bars{
+    padding-right: 10px;
+    padding-left: 5px;
+  }
+}
+.dashboard.top-bar, .account.top-bar{
+  margin-bottom: 40px;
+}
+.second-nav{
+  background-color: $gray-bg;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  span{
+    padding-bottom: 17px;
+  }
+  i{
+    font-size: 2rem;
+  }
+  h6 span{
+    padding: 0 10px 17px 10px;
+    margin-left: 5px;
+    &:hover{
+      border-bottom: solid 3px $primary;
+    }
+  }
+  .active{
+    border-bottom: solid 3px $primary;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+dl.sub-nav{
+  dd.active a{
+    color: $orange;
+    font-weight: bold;
+  }
+  dd.active.white-bg a{
+    background-color: white;
+  }
+  dt {
+    text-transform: inherit;
+  }
+  &.left {
+    width: 100%;
+    dt a.white-bg{
+      background-color: white;
+    }
+    dt{
+      width: 100%;
+      a{
+        width: 75%;
+        border-bottom: solid 3px $primary;
+        background-color: $gray-bg;
+        font-size: 16px;
+      }
+    }
+  }
+}

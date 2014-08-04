@@ -1,3 +1,10 @@
+activate :sprockets
+after_configuration do
+  sprockets.append_path(File.join(root, 'vendor/assets/javascripts'))
+  sprockets.append_path(File.join(root, 'vendor/assets/stylesheets'))
+  sprockets.append_path(File.join(root, 'vendor/assets/components'))
+end
+
 ###
 # Compass
 ###
@@ -48,9 +55,7 @@
 # end
 
 set :css_dir, 'stylesheets'
-
 set :js_dir, 'javascripts'
-
 set :images_dir, 'images'
 
 set :haml, ugly: true
