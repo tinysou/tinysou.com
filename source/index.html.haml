@@ -37,17 +37,31 @@ title: TinySou
         %h2 简单4步，给你的站点添加微搜索功能
         %br
       %hr
+    .row
+      .large-12.columns
+        %div{'data-magellan-expedition' => 'fixed'}
+          %dl.sub-nav
+            %dd{:'data-magellan-arrival' => 'step1'}
+              %a{:href => "#step1"} 1. 注册，登录
+            %dd{:'data-magellan-arrival' => 'step2'}
+              %a{:href => "#step2"} 2. 创建搜索引擎
+            %dd{:'data-magellan-arrival' => 'step3'}
+              %a{:href => "#step3"} 3. 添加域名
+            %dd{:'data-magellan-arrival' => 'step4'}
+              %a{:href => "#step4"} 4. 安装
   .step.wrap.white-bg
     .row
       .large-12.columns
-        %h3
+        %a{:name => "step1"}
+        %h3{'data-magellan-destination' => 'step1'}
           .label 1
-          注册、登录
+          注册，登录
         = image_tag 'step1.png'
   .step.wrap.gray-bg
     .row
       .large-12.columns
-        %h3
+        %a{:name => "step2"}
+        %h3{'data-magellan-destination' => 'step2'}
           .label 2
           创建搜索引擎
         %br
@@ -55,14 +69,16 @@ title: TinySou
   .step.wrap.white-bg
     .row
       .large-12.columns
-        %h3
+        %a{:name => "step3"}
+        %h3{'data-magellan-destination' => 'step3'}
           .label 3
           添加域名
         = image_tag 'step3.png'
   .step.wrap.gray-bg
     .row
       .large-12.columns
-        %h3
+        %a{:name => "step4"}
+        %h3{'data-magellan-destination' => 'step4'}
           .label 4
           安装
         = image_tag 'step4.png'

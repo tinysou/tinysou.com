@@ -13,6 +13,9 @@
   }
   input {
     height: 51px;
+    &:hover{
+      border: solid 2px #c25e00;
+    }
   }
   p{
     font-size: 1.5rem;
@@ -30,4 +33,13 @@
   background-color: #ff902a;
   border-radius: 50%;
   vertical-align: middle;
+}
+.steps dl.sub-nav{
+  background: $primary-bg;
+  width: 67%;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  dd.active a{
+    background-color: $primary-bg;
+  }
 }
