@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: http://ruby.taobao.org/
   specs:
     activesupport (4.1.4)
       i18n (~> 0.6, >= 0.6.9)
@@ -71,7 +71,7 @@ GEM
       middleman-core (>= 3.0.2)
       multi_json (~> 1.0)
       rack-livereload
-    middleman-sprockets (3.3.5)
+    middleman-sprockets (3.3.6)
       middleman-core (~> 3.3)
       sprockets (~> 2.12.1)
       sprockets-helpers (~> 1.1.0)
