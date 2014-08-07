@@ -5,12 +5,6 @@
     font-weight: bolder;
   }
   background-image: linear-gradient(to bottom, #1c8c9b 0, $primary 80%);
-  .button{
-    background-color: #ff902a;
-    &:hover{
-      background-color: #df6d04;
-    }
-  }
   input {
     height: 51px;
     &:hover{
@@ -41,5 +35,16 @@
   padding-bottom: 5px;
   dd.active a{
     background-color: $primary-bg;
+  }
+}
+.welcome{
+  .row{
+    padding-top: 60px;
+  }
+}
+.button.orange{
+  background-color: #ff902a;
+  &:hover{
+    background-color: #df6d04;
   }
 }
