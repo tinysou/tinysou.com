@@ -37,6 +37,11 @@
     background-color: $primary-bg;
   }
 }
+.welcome{
+  .row{
+    padding-top: 60px;
+  }
+}
 .button.orange{
   background-color: #ff902a;
   &:hover{
