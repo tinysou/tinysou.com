@@ -13,7 +13,7 @@ title: TinySou
       .large-8.large-centered.columns
         %form.row.collapse
           .large-9.columns
-            %input#st-search-input{type: 'text', placeholder: '输入要搜索的内容：'}
+            %input#ts-search-input{type: 'text', placeholder: '输入要搜索的内容：'}
           .large-3.columns
             %input.button{type: 'submit', value: '搜索'}
     .row
@@ -83,32 +83,34 @@ title: TinySou
           安装
         = image_tag 'step4.png'
 
-%script{type: 'text/javascript', src: "http://yuetai.wendycan.org/tinysou-no-jq.min.js"}
-<link type='text/css' rel='stylesheet' href="http://yuetai.wendycan.org/tinysou.min.css" media='all' />
+/ %script{type: 'text/javascript', src: "http://tinysou-cdn.qiniudn.com/tinysou.min.js"}
+/ <link type='text/css' rel='stylesheet' href="http://tinysou-cdn.qiniudn.com/tinysou.min.css" media='all' />
 
 :javascript
   $(document).ready(function () {
-    var resultTemplate = Hogan.compile('<div class="st-result"><h3 class="title"><a href="{{url}}" class="st-search-result-link">{{title}}</a></h3><div class="st-metadata"><span class="st-snippet">{{{body}}}</span></div></div>')
-    var customRenderer = function(documentType, item) {
+    var resultTemplate = Hogan.compile('<div class="ts-result"><h3 class="title"><a href="{{url}}" class="ts-search-result-link">{{title}}</a></h3><div class="ts-metadata"><span class="ts-snippet">{{{body}}}</span></div></div>')
+    var customRenderer = function(item) {
       var data = {
-        title: item['title'],
-        url: item['url'],
+        title: item['document']['title'],
+        url: item['document']['url'],
         body: item.highlight['body'] || item['body'].substring(0, 300)
       };
       return resultTemplate.render(data);
     };
-    var customRenderActFunction = function(document_type, item) {
-      var out = '<p class="title">' + item['title'] + '</p>';
-      out = out.concat('<p class="url">' + item['sections'][0] + '</p>');
+    var customRenderActFunction = function(item) {
+      var out = '<p class="title">' + item['document']['title'] + '</p>';
+      out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
       return out;
     };
-    $('#st-search-input').tinysouSearch({
-      // resultContainingElement: '#st-results-container',
-      engineKey: '4-1kQC3Ly9j4isC9vDwd',
+    TinySou.root_url = 'http://0.0.0.0:9292'
+    $('#ts-search-input').tinysouSearch({
+      // resultContainingElement: '#ts-results-container',
+      engineKey: 'ecc9d2fbe2fce8c4ded4',
       renderFunction: customRenderer,
       perPage: 4,
       // renderStyle: 'new_page',
       // resultPageURL: '/site/search',
-      renderActFunction: customRenderActFunction
+      renderActFunction: customRenderActFunction,
+      fetchFields: ['title', 'url', 'sections']
     });
   })

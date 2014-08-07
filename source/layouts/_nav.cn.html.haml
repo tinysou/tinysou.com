@@ -3,14 +3,14 @@
     %a.left-off-canvas-toggle.menu-icon
       %span
   %section.middle.tab-bar-section
-    %a{:href => "/"}
-      %h1= 'TinySou'
+    %a{href: "/"}
+      %h1= '微搜索'
 %aside.left-off-canvas-menu.show-for-small
   %ul.off-canvas-list
     %li
       %a.reverse{href: '/'} 首页
     %li
-      %a.reverse{:href => "/engines"} 控制台
+      %a.reverse{:href => 'https://dashobard.tinysou.com/engines'} 控制台
 %a.exit-off-canvas
 
 %nav.top-bar.hide-for-small{:'data-topbar' => true}
@@ -19,14 +19,14 @@
       %a.default{href: '/'}
         = image_tag "logo.png"
         &nbsp;
-        TinySou
+        微搜索
 
   %section.top-bar-section
     %ul.right
       %li.active
         %a.reverse{href: '/'} 首页
       %li
-        %a.reverse{:href => "/engines"}
+        %a.reverse{:href => 'https://dashobard.tinysou.com/engines'}
           = '控制台'
       / %li
       /   %a.reverse{href: '#'}= t('global.docs')
