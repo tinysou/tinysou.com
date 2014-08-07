@@ -15,7 +15,7 @@ title: TinySou
           .large-9.columns
             %input#ts-search-input{type: 'text', placeholder: '输入要搜索的内容：'}
           .large-3.columns
-            %input.button{type: 'submit', value: '搜索'}
+            %input.button.orange{type: 'submit', value: '搜索'}
     .row
       .large-12.columns
         %ul.small-block-grid-3
@@ -47,7 +47,7 @@ title: TinySou
               %a{:href => "#step2"} 2. 添加域名
             %dd{:'data-magellan-arrival' => 'step3'}
               %a{:href => "#step3"} 3. 安装
-  .step.wrap.white-bg
+  .step.wrap.gray-bg
     .row
       .large-12.columns
         %a{:name => "step1"}
@@ -55,7 +55,7 @@ title: TinySou
           .label 1
           创建搜索引擎
         = image_tag 'step1.png'
-  .step.wrap.gray-bg
+  .step.wrap.white-bg
     .row
       .large-12.columns
         %a{:name => "step2"}
@@ -64,7 +64,7 @@ title: TinySou
           添加域名
         %br
         = image_tag 'step2.png'
-  .step.wrap.white-bg
+  .step.wrap.gray-bg
     .row
       .large-12.columns
         %a{:name => "step3"}
@@ -73,6 +73,12 @@ title: TinySou
           安装
         %br
         = image_tag 'step3.png'
+.welcome.wrap.white-bg
+  .row
+    .large-12.columns.text-center
+      %h3 欢迎来到TinySou
+      %br
+      %a.button{:href => "#"} 进入控制台
 
 %script{type: 'text/javascript', src: "http://tinysou-cdn.qiniudn.com/tinysou-nojquery.js"}
 <link type='text/css' rel='stylesheet' href="http://tinysou-cdn.qiniudn.com/tinysou.min.css" media='all' />
