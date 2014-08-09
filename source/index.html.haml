@@ -1,5 +1,5 @@
 ---
-title: TinySou
+title: 微搜索
 ---
 
 .brand
@@ -13,7 +13,7 @@ title: TinySou
       .large-8.large-centered.columns
         %form.row.collapse
           .large-9.columns
-            %input#ts-search-input{type: 'text', placeholder: '输入要搜索的内容：'}
+            %input#ts-search-input{type: 'text', placeholder: '例如：内测'}
           .large-3.columns
             %input.button.orange{type: 'submit', value: '搜索'}
     .row
@@ -97,9 +97,10 @@ title: TinySou
       out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
       return out;
     };
+    TinySou.root_url = 'http://0.0.0.0:9292'
     $('#ts-search-input').tinysouSearch({
       // resultContainingElement: '#ts-results-container',
-      engineKey: '97eaafba26b04d3cdeb9',
+      engineKey: 'ecc9d2fbe2fce8c4ded4',
       renderFunction: customRenderer,
       perPage: 4,
       // renderStyle: 'new_page',
