@@ -33,15 +33,16 @@
 
       .tiny-footer
         .row
-          .large-8.columns
-            %ul.inline-list
-              %li
-                %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
-              %li
-                %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
-          .large-4.columns
-            %p
+          .medium-4.columns.medium-push-8
+            %p.text-center
               %small 南京自由风暴网络科技有限公司
+          .medium-8.columns.medium-pull-4
+            %p.text-center.show-for-small-only
+              %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
+              %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
+            %p.show-for-medium-up
+              %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
+              %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
   :javascript
     $(document).ready(function () {
       $(document).foundation();
