@@ -90,7 +90,7 @@ title: 微搜索
       var data = {
         title: item['document']['title'],
         url: item['document']['url'],
-        body: item.highlight['body'] || item['body'].substring(0, 300)
+        body: item.highlight['body'] || item['document']['body'].substring(0, 300)
       };
       return resultTemplate.render(data);
     };
@@ -107,6 +107,6 @@ title: 微搜索
       // renderStyle: 'new_page',
       // resultPageURL: '/site/search',
       renderActFunction: customRenderActFunction,
-      fetchFields: ['title', 'url', 'sections']
+      fetchFields: ['title', 'url', 'sections', 'body']
     });
   })
