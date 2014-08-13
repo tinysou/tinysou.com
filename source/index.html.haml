@@ -90,7 +90,7 @@ title: 微搜索
       var data = {
         title: item['document']['title'],
         url: item['document']['url'],
-        body: item.highlight['body'] || item['document']['body'].substring(0, 300)
+        body: (item.highlight && item.highlight['body']) || item['document']['body'].substring(0, 300)
       };
       return resultTemplate.render(data);
     };
