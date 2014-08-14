@@ -34,14 +34,19 @@
       .tiny-footer
         .row
           .large-8.columns
+            %p
+              %small 友情链接
             %ul.inline-list
               %li
-                %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
+                %a{href: 'https://dotide.com'}= 'Dotide'
               %li
-                %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
+                %a{href: 'http://easydatasheet.cn/'}= 'EasyDatasheet'
           .large-4.columns
             %p
               %small 南京自由风暴网络科技有限公司
+            %p
+              %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
+              %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
   :javascript
     $(document).ready(function () {
       $(document).foundation();
