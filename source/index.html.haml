@@ -38,7 +38,7 @@ title: 微搜索
         %br
       %hr
       %br
-    .row
+    .row.show-for-medium-up
       .large-12.columns
         %div{'data-magellan-expedition' => 'fixed'}
           %dl.sub-nav
@@ -49,6 +49,18 @@ title: 微搜索
                 %a{:href => "#step2"} 2. 添加域名
               %dd{:'data-magellan-arrival' => 'step3'}
                 %a{:href => "#step3"} 3. 安装
+    .row.show-for-small-only
+      %div{'data-magellan-expedition' => 'fixed'}
+        %ul.sub-nav
+          .sub-nav-body
+            %li{:'data-magellan-arrival' => 'step1'}
+              %a{:href => "#step1"} 1. 创建搜索引擎
+            %li{:'data-magellan-arrival' => 'step2'}
+              %a{:href => "#step2"} 2. 添加域名
+            %li{:'data-magellan-arrival' => 'step3'}
+              %a{:href => "#step3"} 3. 安装
+
+
   .step.wrap.gray-bg
     .row
       .large-12.columns
