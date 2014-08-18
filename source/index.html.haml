@@ -9,13 +9,13 @@ title: 微搜索
         %h2.text-center 微搜索
         %p.text-center 最好用的站内搜索引擎
     %br
-    .row
-      .large-8.large-centered.columns
-        %form.row.collapse
-          .columns.medium-9.small-9
-            %input#ts-search-input{type: 'text', placeholder: '例如：内测'}
-          .columns.medium-3.small-3
-            %input.button.orange{type: 'submit', value: '搜索'}
+    %form.row.collapse
+      .large-3.columns.medium-2.small-1
+        %p
+      .large-5.columns.medium-6.small-7
+        %input#ts-search-input{type: 'text', placeholder: '例如：内测'}
+      .large-1.columns.medium-2.small-2.end
+        %input.button.orange{type: 'submit', value: '搜索'}
     .row
       .large-12.columns
         %ul.small-block-grid-3
