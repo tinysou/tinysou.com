@@ -28,11 +28,28 @@
   border-radius: 50%;
   vertical-align: middle;
 }
-.steps dl.sub-nav{
+.steps .sub-nav{
   background: $primary-bg;
   padding-top: 5px;
   padding-bottom: 5px;
   dd.active a{
+    background-color: $primary-bg;
+  }
+  li{
+    margin-bottom: 0;
+    margin-left: 0;
+    a{
+      padding-left: 0.3rem;
+    }
+    &:first-child{
+      margin-left: 1rem;
+      a{
+        padding-left: 1rem;
+      }
+    }
+  }
+  li.active a{
+    color: #ff5900;
     background-color: $primary-bg;
   }
 }
