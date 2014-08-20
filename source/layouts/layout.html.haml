@@ -65,23 +65,18 @@
 
   :javascript
     $(document).ready(function () {
+      #{yield_content :onready}
       $(document).foundation();
-    });
-  :javascript
-    $(document).ready(function () {
       var customRenderActFunction = function(item) {
         var out = '<p class="title">' + item['document']['title'] + '</p>';
         out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
         return out;
       };
       $('#ts-search-input').tinysouSearch({
-        // resultContainingElement: '#ts-results-container',
         engineKey: '97eaafba26b04d3cdeb9',
         perPage: 5,
         resultLimit: 5,
-        // renderStyle: 'new_page',
-        // resultPageURL: '/site/search',
-        renderActFunction: customRenderActFunction,
+        renderActFunction: customRenderActFunction
       });
     })
 </html>

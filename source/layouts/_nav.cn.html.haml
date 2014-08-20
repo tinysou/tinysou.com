@@ -12,7 +12,7 @@
     %li
       %a.reverse{href: 'http://blog.tinysou.com'} 博客
     %li
-      %a.reverse{href: 'http://dashboard.tinysou.com'} 控制台
+      %a.reverse{href: 'http://dashboard.tinysou.com/login'} 控制台
 %a.exit-off-canvas
 
 %nav.top-bar.hide-for-small{:'data-topbar' => true}
@@ -22,6 +22,12 @@
         = image_tag "logo.png"
         &nbsp;
         微搜索
+  - unless current_page.data.nosearch
+    %section.top-bar-section
+      %ul.left
+        %li.has-form
+          %form
+            %input.search-input{type: 'search', id: 'ts-search-input', placeholder: '搜索'}
 
   %section.top-bar-section
     %ul.right
@@ -30,9 +36,5 @@
       %li
         %a.reverse{href: 'http://blog.tinysou.com'} 博客
       %li
-        %a.reverse{href: 'http://dashboard.tinysou.com'}
+        %a.reverse{href: 'http://dashboard.tinysou.com/login'}
           = '控制台'
-      / %li
-      /   %a.reverse{href: '#'}= t('global.docs')
-      / %li
-      /   %a{href: "/locale?lang=en"}= 'English'
