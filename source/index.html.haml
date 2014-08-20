@@ -1,5 +1,7 @@
 ---
 title: 微搜索
+keywords: 搜索引擎,站内搜索,引用内搜索,搜索API
+description: 最好用的站内搜索工具
 ---
 
 .brand
@@ -91,24 +93,3 @@ title: 微搜索
   .row
     .large-12.columns.text-center
       %a.button.large{:href => "http://dashboard.tinysou.com/signup"} 立即试用
-
-%script{type: 'text/javascript', src: "http://tinysou-cdn.qiniudn.com/tinysou-nojquery.js"}
-<link type='text/css' rel='stylesheet' href="http://tinysou-cdn.qiniudn.com/tinysou.min.css" media='all' />
-
-:javascript
-  $(document).ready(function () {
-    var customRenderActFunction = function(item) {
-      var out = '<p class="title">' + item['document']['title'] + '</p>';
-      out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
-      return out;
-    };
-    $('#ts-search-input').tinysouSearch({
-      // resultContainingElement: '#ts-results-container',
-      engineKey: '97eaafba26b04d3cdeb9',
-      perPage: 5,
-      resultLimit: 5,
-      // renderStyle: 'new_page',
-      // resultPageURL: '/site/search',
-      renderActFunction: customRenderActFunction,
-    });
-  })

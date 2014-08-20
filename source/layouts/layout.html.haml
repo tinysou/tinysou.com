@@ -20,9 +20,9 @@
   %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}/
 
   %link{:href => "/humans.txt", :rel => "author", :type => "text/plain"}/
-  %title= data.page.title || "TinySou"
+  %title= data.page.title || "微搜索"
   = stylesheet_link_tag "application"
-  = javascript_include_tag "application"
+  = stylesheet_link_tag "http://tinysou-cdn.qiniudn.com/tinysou.min.css"
 
 %body
   .off-canvas-wrap{:'data-offcanvas' => true}
@@ -43,12 +43,45 @@
                 %a{href: 'http://easydatasheet.cn/'}= 'EasyDatasheet'
           .large-4.columns
             %p
-              %small 南京自由风暴网络科技有限公司
+              %small 微搜索团队
             %p
-              %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} Tinysou"
+              %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} 微搜索"
               %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
+
+  / Javascript
+  = javascript_include_tag "application"
+  = javascript_include_tag 'http://tinysou-cdn.qiniudn.com/tinysou-nojquery.js'
+
+  - if build?
+    -# Google Analytics
+    :javascript
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-53992829-1', 'auto');
+      ga('send', 'pageview');
+
   :javascript
     $(document).ready(function () {
       $(document).foundation();
     });
+  :javascript
+    $(document).ready(function () {
+      var customRenderActFunction = function(item) {
+        var out = '<p class="title">' + item['document']['title'] + '</p>';
+        out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
+        return out;
+      };
+      $('#ts-search-input').tinysouSearch({
+        // resultContainingElement: '#ts-results-container',
+        engineKey: '97eaafba26b04d3cdeb9',
+        perPage: 5,
+        resultLimit: 5,
+        // renderStyle: 'new_page',
+        // resultPageURL: '/site/search',
+        renderActFunction: customRenderActFunction,
+      });
+    })
 </html>
