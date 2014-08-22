@@ -21,6 +21,14 @@
       font-size: 1rem;
       color: $gray-bg;
     }
+    img {
+      width: 128px;
+    }
+    @media #{$small-only} {
+      img {
+        width: 80px;
+      }
+    }
   }
 }
 .steps .label{
