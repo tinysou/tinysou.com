@@ -16,4 +16,12 @@
       padding-right: 5px;
     }
   }
+  @media #{$small-only} {
+    li, p {
+      text-align: center;
+    }
+    p {
+      margin-top: 8px;
+    }
+  }
 }

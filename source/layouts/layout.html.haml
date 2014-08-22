@@ -33,20 +33,19 @@
 
       .tiny-footer
         .row
-          .large-8.columns
-            %p
-              %small 友情链接
-            %ul.inline-list
-              %li
-                %a{href: 'https://dotide.com'}= 'Dotide'
-              %li
-                %a{href: 'http://easydatasheet.cn/'}= 'EasyDatasheet'
-          .large-4.columns
+          .small-12.large-push-8.medium-push-8.large-4.medium-4.columns
             %p
               %small 微搜索团队
             %p
               %a.reverse{href: 'http://tinysou.com'}= "© #{Date.today.year} 微搜索"
               %a.reverse{href: 'http://www.miibeian.gov.cn'}= '苏ICP备12071270号'
+          .small-12.large-pull-4.medium-pull-4.large-8.medium-8.columns
+            %p
+              %small 友情链接
+            %p
+              %a{href: 'https://dotide.com'}= 'Dotide'
+              %a{href: 'http://easydatasheet.cn/'}= 'EasyDatasheet'
+              %a{:href => 'http://teahour.fm/'}= 'Teahour'
 
   / Javascript
   = javascript_include_tag "application"
