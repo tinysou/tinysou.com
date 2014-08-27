@@ -2,16 +2,19 @@
   a{
     font-weight: bold !important;
   }
+
   .title-area {
     a{
       color: white;
       font-size: 18px;
       font-weight: 200;
+
       img {
         height: 40px;
         width: auto;
         margin-top: -10px;
       }
+
       &:hover {
         opacity: 0.8;
       }
@@ -25,19 +28,25 @@ dl.sub-nav {
     color: $orange;
     font-weight: bold;
   }
+
   dd.active.white-bg a {
     background-color: white;
   }
+
   dt {
     text-transform: inherit;
   }
+
   &.left {
     width: 100%;
+
     dt a.white-bg {
       background-color: white;
     }
+
     dt {
       width: 100%;
+
       a {
         width: 75%;
         border-bottom: solid 3px $primary;

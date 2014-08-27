@@ -1,26 +1,31 @@
 .brand {
   color: white;
+  background-image: linear-gradient(to bottom, #1c8c9b 0, $primary 80%);
+
   h2 {
     color: white;
     font-weight: bolder;
   }
-  background-image: linear-gradient(to bottom, #1c8c9b 0, $primary 80%);
+
   input {
     height: 51px;
     &:hover {
       border: solid 2px #c25e00;
     }
   }
+
   p {
     font-size: 1.5rem;
   }
   .small-block-grid-3 {
     margin-top: 70px;
+
     p {
       margin-top: 8px;
       font-size: 1rem;
       color: $gray-bg;
     }
+
     img {
       width: 128px;
     }
@@ -31,52 +36,65 @@
     }
   }
 }
+
 .steps .label {
   background-color: #ff902a;
   border-radius: 50%;
   vertical-align: middle;
 }
+
 .steps .sub-nav {
   background: $primary-bg;
   padding-top: 5px;
   padding-bottom: 5px;
+
   dd.active a {
     background-color: $primary-bg;
   }
+
   li {
     margin-bottom: 0;
     margin-left: 0;
+
     a {
       padding-left: 0.3rem;
     }
+
     &:first-child {
       margin-left: 1rem;
+
       a{
         padding-left: 1rem;
       }
     }
   }
+
   li.active a {
     color: #ff5900;
     background-color: $primary-bg;
   }
 }
+
 .steps [data-magellan-expedition] {
   right: 0;
   padding: 0;
+
   .sub-nav-body {
     max-width: 62.5rem;
     margin-left: auto;
     margin-right: auto;
   }
 }
+
 .welcome {
   .row {
     padding-top: 60px;
   }
 }
+
 .button.orange {
   background-color: #ff902a;
+
   &:hover {
     background-color: #df6d04;
   }
