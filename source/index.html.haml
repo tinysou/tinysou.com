@@ -23,15 +23,14 @@ nosearch: true
       .large-12.columns
         %ul.small-block-grid-3
           %li.text-center
-            = image_tag 'brand1.png'
+            = image_tag 'brand1.png', alt: 'Cross Site Search'
             %p 跨站搜索
           %li.text-center
-            = image_tag 'brand2.png'
+            = image_tag 'brand2.png', alt: 'Autocomplete'
             %p 自动补全
           %li.text-center
-            = image_tag 'brand3.png'
+            = image_tag 'brand3.png', alt: 'Simple Installation'
             %p 安装简单
-
   %br
 .steps
   .step-title.wrap.white-bg
@@ -62,9 +61,7 @@ nosearch: true
               %a{:href => "#step2"} 2. 添加域名
             %li{:'data-magellan-arrival' => 'step3'}
               %a{:href => "#step3"} 3. 安装
-
-
-  .step.wrap.gray-bg
+  .step.wrap
     .row
       .large-12.columns
         %a{:name => "step1"}
@@ -81,7 +78,7 @@ nosearch: true
           添加域名
         %br
         = image_tag 'step2.png'
-  .step.wrap.gray-bg
+  .step.wrap
     .row
       .large-12.columns
         %a{:name => "step3"}

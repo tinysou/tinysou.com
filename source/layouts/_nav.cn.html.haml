@@ -4,23 +4,23 @@
       %span
   %section.middle.tab-bar-section
     %a{href: "/"}
-      %h1= '微搜索'
+      %h1= "微搜索"
 %aside.left-off-canvas-menu.show-for-small
   %ul.off-canvas-list
     %li
-      %a.reverse{href: '/'} 首页
+      %a.reverse{href: "/"} 首页
     %li
-      %a.reverse{href: 'http://doc.tinysou.com'} 文档
+      %a.reverse{href: "http://doc.tinysou.com"} 文档
     %li
-      %a.reverse{href: 'http://blog.tinysou.com'} 博客
+      %a.reverse{href: "http://blog.tinysou.com"} 博客
     %li
-      %a.reverse{href: 'http://dashboard.tinysou.com/login'} 控制台
+      %a.reverse{href: "http://dashboard.tinysou.com/login"} 控制台
 %a.exit-off-canvas
 
-%nav.top-bar.hide-for-small{:'data-topbar' => true}
+%nav.top-bar.hide-for-small{:"data-topbar" => true}
   %ul.title-area
     %li.name
-      %a.default{href: '/'}
+      %a.default{href: "/"}
         = image_tag "logo.png"
         &nbsp;
         微搜索
@@ -29,16 +29,16 @@
       %ul.left
         %li.has-form
           %form
-            %input.search-input{type: 'search', id: 'ts-search-input', placeholder: '搜索'}
+            %input.search-input{type: "search", id: "ts-search-input", placeholder: "搜索"}
 
   %section.top-bar-section
     %ul.right
       %li.active
-        %a.reverse{href: '/'} 首页
+        %a.reverse{href: "/"} 首页
       %li
-        %a.reverse{href: 'http://doc.tinysou.com'} 文档
+        %a.reverse{href: "http://doc.tinysou.com"} 文档
       %li
-        %a.reverse{href: 'http://blog.tinysou.com'} 博客
+        %a.reverse{href: "http://blog.tinysou.com"} 博客
       %li
-        %a.reverse{href: 'http://dashboard.tinysou.com/login'}
-          = '控制台'
+        %a.reverse{href: "http://dashboard.tinysou.com/login"}
+          = "控制台"

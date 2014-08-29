@@ -1,28 +1,35 @@
-// Main css
-@import "main/variables";
-@import "main/framework";
-@import "main/mixins";
-@import "main/fonts";
-@import "main/layout";
+/**
+ * Setting styles, value of css variables.
+ */
+@import "settings/variables";
+@import "settings/framework";
+
+/**
+ * Base styles, H1-H6, buttons, etc.
+ */
+
+
+/**
+ * Generic styles, used for all pages.
+ */
+
+@import "generic/mixins";
+@import "generic/fonts";
+@import "generic/layout";
+
+/**
+ * Section styles, used for part of the page(eg. nav, form).
+ */
+
+@import "sections/nav";
+@import "sections/footer";
+
+/**
+ * Main styles, used in a specific page.
+ */
+
 @import "main/home";
 
 /**
- * Generic css (forms, nav etc):
- */
-@import "generic/alert";
-@import "generic/buttons";
-@import "generic/forms";
-@import "generic/links";
-@import "generic/typography";
-@import "generic/table";
-
-/**
- * Page specific styles:
- */
-@import "sections/nav";
-@import "sections/footer";
-@import "sections/sidebar";
-
-/**
-  * Vendor
+  * Vendor, third-party libraries
  */

@@ -1,25 +1,33 @@
-.tiny-footer{
+.tiny-footer {
   padding-top: 10px;
   padding-bottom: 10px;
-  p{
+
+  p {
     margin-bottom: 0;
   }
-  a{
+
+  a {
     font-size: 12px;
   }
-  .fa{
+
+  .fa {
     font-size: 16px;
   }
-  .large-4{
+
+  .large-4 {
     text-align: right;
-    a.reverse{
+
+    a.reverse {
       padding-right: 5px;
     }
   }
+
   @media #{$small-only} {
-    li, p {
+    li,
+    p {
       text-align: center;
     }
+
     p {
       margin-top: 8px;
     }
