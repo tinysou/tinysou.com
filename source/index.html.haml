@@ -1,6 +1,6 @@
 ---
 title: 微搜索
-keywords: 搜索引擎,站内搜索,引用内搜索,搜索API
+keywords: 搜索引擎,站内搜索,应用内搜索,搜索API
 description: 最好用的站内搜索工具
 nosearch: true
 ---
@@ -90,4 +90,8 @@ nosearch: true
 .welcome.wrap.white-bg
   .row
     .large-12.columns.text-center
-      %a.button.large{:href => "http://dashboard.tinysou.com/signup"} 立即试用
+      %a.button.large{:href => "/plan.html"} 立即试用
+
+- content_for :onready do
+  :plain
+    $('li.nav-home').addClass('active');

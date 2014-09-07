@@ -1,0 +1,119 @@
+---
+title: 微搜索 - 套餐
+keywords: 搜索引擎,站内搜索,应用内搜索,搜索API,定价,套餐
+description: 最好用的站内搜索工具
+---
+
+.brand
+  .wrap
+    .row
+      .alert-box.warning{:'data-alert' => true}
+        除了“免费版”外，其他套餐在内测期过后可能会有调整。
+        %a{href: '#', class: 'close'} &times;
+      .large-4.columns
+        %ul.pricing-table
+          %li.title 免费版
+          %li.price 0元/月
+          %li.cta-button
+            %a.button{href: 'http://dashboard.tinysou.com/signup'}= '立即注册'
+          %li.description
+            适用小型网站和移动应用。
+          %li.description
+            含基础功能。有限使用量。
+          %li.description
+            永久免费。
+      .large-4.columns
+        %ul.pricing-table
+          %li.title 基础版
+          %li.price 内测 0元/月
+          %li.cta-button
+            %a.button{href: 'mailto:support@tinysou.com'}= '联系我们'
+          %li.description
+            适用中型网站和移动应用。
+          %li.description
+            含基础功能与基本扩展功能。较大使用量。
+          %li.description
+            5X12 技术支持。
+      .large-4.columns
+        %ul.pricing-table
+          %li.title 专业版
+          %li.price 内测 0元/月
+          %li.cta-button
+            %a.button{href: 'mailto:support@tinysou.com'}= '联系我们'
+          %li.description
+            适用大型网站和移动应用。
+          %li.description
+            含基础功能与所有扩展服务。超大使用量。
+          %li.description
+            7X24 技术支持。多帐号分组管理。
+
+.wrap.white-bg
+  .row
+    .large-12.columns
+      %table.compare-table
+        %thead
+          %tr
+            %th
+            %th{scope: 'column'} 免费版
+            %th{scope: 'column'} 基础版
+            %th{scope: 'column'} 专业版
+        %tbody
+          %tr
+            %td{scope: 'row'} Engines(个)
+            %td 1
+            %td 不限
+            %td 不限
+          %tr
+            %td{scope: 'row'} Documents(个)
+            %td 10,000
+            %td 100,000
+            %td 5,000,000
+          %tr
+            %td{scope: 'row'} 索引 API(次/月)
+            %td 30,000
+            %td 500,000
+            %td 50,000,000
+          %tr
+            %td{scope: 'row'} 搜索 API(次/月)
+            %td 30,000
+            %td 1,000,000
+            %td 100,000,000
+          %tr
+            %td{scope: 'row'} 搜索行为分析
+            %td 1 周(7天)
+            %td 1 季度(90天)
+            %td 1 年(365天)
+          %tr
+            %td{scope: 'row'} 技术支持
+            %td 一个工作日内
+            %td 5X12 小时
+            %td 7X24 小时
+          %tr
+            %td{scope: 'row'} 同义词
+            %td
+              %i.fa.fa-minus
+            %td
+              %i.fa.fa-check
+            %td
+              %i.fa.fa-check
+          %tr
+            %td{scope: 'row'} 分组(多帐号)权限控制
+            %td
+              %i.fa.fa-minus
+            %td
+              %i.fa.fa-minus
+            %td
+              %i.fa.fa-check
+          %tr
+            %td{scope: 'row'} 反 spam
+            %td
+              %i.fa.fa-minus
+            %td
+              %i.fa.fa-minus
+            %td
+              %i.fa.fa-check
+
+- content_for :onready do
+  :plain
+    $('li.nav-plan').addClass('active');
+
