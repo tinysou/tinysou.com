@@ -1,0 +1,41 @@
+.compare-table {
+  width: 100%;
+  border: none;
+
+  tr td, tr th {
+    line-height: 2.125rem;
+    text-align: center;
+  }
+
+  tr:nth-child(odd) td {
+    border-left: solid 1px $gray-border;
+
+    &:first-child {
+      border: none;
+    }
+  }
+
+  tr td {
+    color: $primary;
+    font-weight: bold;
+
+    &:first-child {
+      color: black;
+      font-weight: normal;
+    }
+  }
+
+  tr {
+    th {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    td {
+      font-size: 1rem;
+      &:first-child {
+        font-size: 0.875rem;
+      }
+    }
+  }
+}
