@@ -23,20 +23,20 @@ nosearch: true
       .large-12.columns
         %ul.small-block-grid-3
           %li.text-center
-            = image_tag 'brand1.png', alt: 'Cross Site Search'
-            %p 跨站搜索
-          %li.text-center
             = image_tag 'brand2.png', alt: 'Autocomplete'
-            %p 自动补全
+            %p 即时搜索，自动补全
+          %li.text-center
+            = image_tag 'brand1.png', alt: 'Analytics'
+            %p 搜索分析与可视化
           %li.text-center
             = image_tag 'brand3.png', alt: 'Simple Installation'
-            %p 安装简单
+            %p 快速，稳定，弹性
   %br
 .steps
   .step-title.wrap.white-bg
     .row
       .large-12.columns
-        %h2 简单3步，给你的站点添加微搜索功能
+        %h2 最少只需3步，给你的站点添加微搜索功能
         %br
       %hr
       %br
@@ -91,6 +91,25 @@ nosearch: true
   .row
     .large-12.columns.text-center
       %a.button.large{:href => "/plan.html"} 立即试用
+.welcome.wrap
+  .row
+    .large-12.columns
+      %ul.small-block-grid-3.large-block-grid-5
+        %li
+          %a{href: 'http://baozouribao.com/'}
+            = image_tag 'logo-baozouribao.png'
+        %li
+          %a{href: 'http://www.shanbay.com/'}
+            = image_tag 'logo-shanbay.png'
+        %li
+          %a{href: 'http://qng.im/'}
+            = image_tag 'logo-qng.png'
+        %li
+          %a{href: 'http://teahour.fm/'}
+            = image_tag 'logo-teahour.jpg'
+        %li
+          %a{href: 'http://easydatasheet.cn/'}
+            = image_tag 'logo-easydatasheet.png'
 
 - content_for :onready do
   :plain
