@@ -21,15 +21,18 @@ nosearch: true
         %input.button.orange{type: 'submit', value: '搜索'}
     .row
       .large-12.columns
-        %ul.small-block-grid-3
+        %ul.features.small-block-grid-2.large-block-grid-4
           %li.text-center
-            = image_tag 'brand2.png', alt: 'Autocomplete'
-            %p 即时搜索，自动补全
+            %i.fa.fa-search-plus.fa-5x
+            %p 全文搜索，为中文优化
           %li.text-center
-            = image_tag 'brand1.png', alt: 'Analytics'
+            %i.fa.fa-terminal.fa-5x
+            %p 即输即搜，自动补全
+          %li.text-center
+            %i.fa.fa-bar-chart.fa-5x
             %p 搜索分析与可视化
           %li.text-center
-            = image_tag 'brand3.png', alt: 'Simple Installation'
+            %i.fa.fa-cubes.fa-5x
             %p 快速，稳定，弹性
   %br
 .steps
