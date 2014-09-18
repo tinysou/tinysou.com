@@ -17,13 +17,17 @@
   p {
     font-size: 1.5rem;
   }
+
   .features {
     margin-top: 70px;
+
+    a {
+      color: $gray-bg;
+    }
 
     p {
       margin-top: 8px;
       font-size: 1rem;
-      color: $gray-bg;
     }
 
     img {
@@ -101,4 +105,8 @@
   &:hover {
     background-color: #df6d04;
   }
+}
+
+img.sibling {
+  width: 60%;
 }

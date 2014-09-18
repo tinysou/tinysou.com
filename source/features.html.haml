@@ -3,3 +3,93 @@ title: 特性 - 微搜索
 keywords: 搜索引擎,站内搜索,应用内搜索,搜索API,特性
 description: 最好用的站内搜索工具
 ---
+
+.brand
+  .wrap
+    .row
+      .large-12.columns
+        %h2.text-center 搜索即服务
+        %p.text-center Search as a Service
+    .row
+      .large-12.columns
+        %ul.features.small-block-grid-3
+          %li.text-center
+            = link_to 'http://doc.tinysou.com/guides/overview.html' do
+              %i.fa.fa-book.fa-5x
+              %p 指南
+          %li.text-center
+            = link_to 'http://doc.tinysou.com/v1/overview.html' do
+              %i.fa.fa-cogs.fa-5x
+              %p API
+          %li.text-center
+            = link_to 'http://doc.tinysou.com/crawler/overview.html' do
+              %i.fa.fa-rocket.fa-5x
+              %p 爬虫
+  %br
+.steps
+  #search.step.wrap.white-bg
+    .row
+      .large-6.small-12.columns
+        %h3
+          %i.fa.fa-search-plus
+          全文搜索，实时索引
+        %p
+          帮助你轻松实现全文搜索功能。
+        %p
+          全文索引，对中文优化，支持拼音搜索。
+        %p
+          即时索引，即时可搜。
+      .large-6.small-12.columns
+        = image_tag('features-searching.png', alt: 'Searching', class: 'sibling')
+  #autocomplete.step.wrap
+    .row
+      .large-6.large-push-6.small-12.columns
+        %h3
+          %i.fa.fa-terminal
+          即输即搜，自动补全
+        %p
+          提供即输即搜的用户体验。
+        %p
+          无需输入完整内容，自动补全结果。
+        %p
+          直接点击补全结果，即可实现跳转。
+      .large-6.large-pull-6.small-12.columns
+        = image_tag('features-autocomplete.gif', alt: 'Autocomplete', class: 'sibling')
+  #analytics.step.wrap.white-bg
+    .row
+      .large-6.small-12.columns
+        %h3
+          %i.fa.fa-bar-chart
+          搜索分析与可视化
+        %p
+          更好地了解你的用户。
+        %p
+          搜索热词排名。热门资源。
+        %p
+          没有(匹配到)结果的搜索。
+      .large-6.small-12.columns
+        = image_tag('features-analytics.png', alt: 'Analytics', class: 'sibling')
+  #service.step.wrap
+    .row
+      .large-6.large-push-6.small-12.columns
+        %h3
+          %i.fa.fa-cubes
+          快速，稳定，弹性
+        %p
+          优化的系统架构，保证快速的搜索体验。
+        %p
+          99.99% SLA, 3X数据备份。
+        %p
+          自动扩容，无需为数据增长操心。
+      .large-6.large-pull-6.small-12.columns
+        = image_tag('features-service.png', alt: 'Service', class: 'sibling')
+
+.welcome.wrap.white-bg
+  .row
+    .large-12.columns.text-center
+      %a.button.large{:href => "/plan.html"} 立即试用
+
+
+- content_for :onready do
+  :plain
+    $('li.nav-features').addClass('active');
