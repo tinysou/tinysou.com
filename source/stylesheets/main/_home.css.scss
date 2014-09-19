@@ -90,6 +90,12 @@
   }
 }
 
+.step {
+  img {
+    border: solid 2px $gray-border;
+  }
+}
+
 .welcome {
   .row {
     padding-top: 60px;
