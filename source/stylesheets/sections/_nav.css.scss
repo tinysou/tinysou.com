@@ -7,22 +7,27 @@
     margin-top: 10px;
   }
 
+  .has-form {
+    margin-right: 30px;
+  }
+
   .title-area {
+    margin-right: 30px;
     a{
       color: white;
-      font-size: 22px;
+      font-size: 25px;
       font-weight: 200;
 
       img {
         height: 40px;
         width: auto;
-        margin-top: -10px;
+        margin-top: -5px;
       }
 
       &:hover {
         opacity: 0.8;
       }
-      line-height: 65px;
+      line-height: 60px;
       padding-left: 30px;
     }
   }
