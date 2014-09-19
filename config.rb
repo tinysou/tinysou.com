@@ -75,5 +75,5 @@ configure :build do
   # activate :relative_assets
 
   # Or use a different image path
-  set :http_prefix, '//tinysou-cdn.b0.upaiyun.com/'
+  set :http_prefix, '//tinysou-cdn.b0.upaiyun.com/assets/'
 end
