@@ -12,19 +12,7 @@ description: 最好用的站内搜索工具
         %p.text-center Search as a Service
     .row
       .large-12.columns
-        %ul.features.small-block-grid-3
-          %li.text-center
-            = link_to 'http://doc.tinysou.com/guides/overview.html' do
-              %i.fa.fa-book.fa-5x
-              %p 指南
-          %li.text-center
-            = link_to 'http://doc.tinysou.com/v1/overview.html' do
-              %i.fa.fa-cogs.fa-5x
-              %p API
-          %li.text-center
-            = link_to 'http://doc.tinysou.com/crawler/overview.html' do
-              %i.fa.fa-rocket.fa-5x
-              %p 爬虫
+        = image_tag('feature-saas.png', alt: 'SaaS')
   %br
 .steps
   #search.step.wrap.white-bg
@@ -40,7 +28,7 @@ description: 最好用的站内搜索工具
         %p
           即时索引，即时可搜。
       .large-6.small-12.columns
-        = image_tag('features-searching.png', alt: 'Searching', class: 'sibling')
+        = image_tag('features-searching.gif', alt: 'Searching', class: 'sibling')
   #autocomplete.step.wrap
     .row
       .large-6.large-push-6.small-12.columns
