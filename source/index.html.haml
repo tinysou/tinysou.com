@@ -120,3 +120,4 @@ nosearch: true
 - content_for :onready do
   :plain
     $('li.nav-home').addClass('active');
+    $('video').click(function(){this.paused?this.play():this.pause();});
