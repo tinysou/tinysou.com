@@ -99,6 +99,11 @@
   img {
     border: solid 2px $gray-border;
   }
+
+  &.wrap {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .welcome {
