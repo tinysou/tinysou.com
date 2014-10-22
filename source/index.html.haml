@@ -107,9 +107,15 @@ nosearch: true
           %a{href: 'http://easydatasheet.cn/'}
             = image_tag 'logo-easydatasheet.png'
 .reveal-modal.medium#videoModal{:'data-reveal' => true}
+  %h3
+    微搜索初探
+    %a{:href => "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.mp4", download: 'tinysou_start.mp4', target: '_blank'}
+      %i.fa.fa-cloud-download
+      下载视频
   %video{controls: true, width: '100%'}
-    / %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.mp4", type: 'video/mp4'}
-    / %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.webm", type: 'video/webm'}
+    %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.mp4", type: 'video/mp4'}
+    %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.webm", type: 'video/webm'}
+  %a.close-reveal-modal &#215;
 
 - content_for :onready do
   :plain
