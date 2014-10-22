@@ -1,6 +1,11 @@
 .brand {
   color: white;
   background-image: linear-gradient(to bottom, #1c8c9b 0, $primary 80%);
+  border-bottom: solid 2px $gray-border;
+
+  .wrap {
+    padding-bottom: 0;
+  }
 
   h2 {
     color: white;
@@ -94,6 +99,11 @@
   img {
     border: solid 2px $gray-border;
   }
+
+  &.wrap {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
 }
 
 .welcome {
@@ -119,5 +129,26 @@
 
   &:hover {
     background-color: #df6d04;
+  }
+}
+
+.video-img img {
+  border: solid 1px $gray-border;
+  margin-top: 40px;
+  opacity: 0.98;
+  border-radius: 8px 8px 0 0;
+
+  &:hover {
+    opacity: 0.95;
+  }
+}
+
+.reveal-modal {
+  h3 a {
+    font-size: 16px;
+    padding-left: 10px;
+  }
+  .close-reveal-modal {
+    color: #000;
   }
 }

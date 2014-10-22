@@ -20,80 +20,66 @@ nosearch: true
       .large-1.columns.medium-2.small-2.end
         %input.button.orange{type: 'submit', value: '搜索'}
     .row
-      .large-12.columns
-        %ul.features.small-block-grid-2.large-block-grid-4
-          %li.text-center
-            %a{href: '/features.html#search'}
-              %i.fa.fa-search-plus.fa-5x
-              %p 全文搜索，实时索引
-          %li.text-center
-            %a{href: '/features.html#autocomplete'}
-              %i.fa.fa-terminal.fa-5x
-              %p 即输即搜，自动补全
-          %li.text-center
-            %a{href: '/features.html#analytics'}
-              %i.fa.fa-bar-chart.fa-5x
-              %p 搜索分析与可视化
-          %li.text-center
-            %a{href: '/features.html#service'}
-              %i.fa.fa-cubes.fa-5x
-              %p 快速，稳定，弹性
-  %br
+      .large-12.columns.video-img
+        %a{:href => "#", :'data-reveal-id' => 'videoModal'}
+          =image_tag("video-img.png")
 .steps
-  .step-title.wrap.white-bg
+  #search.step.wrap.white-bg
     .row
-      .large-12.columns
-        %h2 最少只需3步，给你的站点添加微搜索功能
-        %br
-      %hr
-      %br
-    .row.show-for-medium-up
-      .large-12.columns
-        %div{'data-magellan-expedition' => 'fixed'}
-          %dl.sub-nav
-            .sub-nav-body
-              %dd{:'data-magellan-arrival' => 'step1'}
-                %a{:href => "#step1"} 1. 创建搜索引擎
-              %dd{:'data-magellan-arrival' => 'step2'}
-                %a{:href => "#step2"} 2. 添加域名
-              %dd{:'data-magellan-arrival' => 'step3'}
-                %a{:href => "#step3"} 3. 安装
-    .row.show-for-small-only
-      %div{'data-magellan-expedition' => 'fixed'}
-        %ul.sub-nav
-          .sub-nav-body
-            %li{:'data-magellan-arrival' => 'step1'}
-              %a{:href => "#step1"} 1. 创建搜索引擎
-            %li{:'data-magellan-arrival' => 'step2'}
-              %a{:href => "#step2"} 2. 添加域名
-            %li{:'data-magellan-arrival' => 'step3'}
-              %a{:href => "#step3"} 3. 安装
-  .step.wrap
+      .large-6.small-12.columns
+        %h3
+          %i.fa.fa-search-plus
+          全文搜索，实时索引
+        %p
+          帮助你轻松实现全文搜索功能。
+        %p
+          全文索引，对中文优化，支持拼音搜索。
+        %p
+          即时索引，即时可搜。
+      .large-6.small-12.columns
+        = image_tag('features-searching.gif', alt: 'Searching')
+  #autocomplete.step.wrap
     .row
-      .large-12.columns
-        %a{:name => "step1"}
-        %h3{'data-magellan-destination' => 'step1'}
-          .label 1
-          创建搜索引擎
-        = image_tag 'step1.png'
-  .step.wrap.white-bg
+      .large-6.large-push-6.small-12.columns
+        %h3
+          %i.fa.fa-terminal
+          即输即搜，自动补全
+        %p
+          提供即输即搜的用户体验。
+        %p
+          无需输入完整内容，自动补全结果。
+        %p
+          直接点击补全结果，即可实现跳转。
+      .large-6.large-pull-6.small-12.columns
+        = image_tag('features-autocomplete.png', alt: 'Autocomplete')
+  #analytics.step.wrap.white-bg
     .row
-      .large-12.columns
-        %a{:name => "step2"}
-        %h3{'data-magellan-destination' => 'step2'}
-          .label 2
-          添加域名
-        %br
-        = image_tag 'step2.png'
-  .step.wrap
+      .large-6.small-12.columns
+        %h3
+          %i.fa.fa-bar-chart
+          搜索分析与可视化
+        %p
+          更好地了解你的用户。
+        %p
+          搜索热词排名。热门资源。
+        %p
+          没有(匹配到)结果的搜索。
+      .large-6.small-12.columns
+        = image_tag('features-analytics.png', alt: 'Analytics')
+  #service.step.wrap
     .row
-      .large-12.columns
-        %a{:name => "step3"}
-        %h3{'data-magellan-destination' => 'step3'}
-          .label 3
-          安装
-        %br
-        = image_tag 'step3.png'
+      .large-6.large-push-6.small-12.columns
+        %h3
+          %i.fa.fa-cubes
+          快速，稳定，弹性
+        %p
+          优化的系统架构，保证快速的搜索体验。
+        %p
+          99.99% SLA, 3X数据备份。
+        %p
+          自动扩容，无需为数据增长操心。
+      .large-6.large-pull-6.small-12.columns
+        = image_tag('features-service.png', alt: 'Service')
 .welcome.wrap.white-bg
   .row
     .large-4.large-offset-2.medium-6.columns.text-center
@@ -120,7 +106,18 @@ nosearch: true
         %li
           %a{href: 'http://easydatasheet.cn/'}
             = image_tag 'logo-easydatasheet.png'
+.reveal-modal.medium#videoModal{:'data-reveal' => true}
+  %h3
+    微搜索快速安装
+    %a{:href => "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.mp4", download: 'tinysou_start.mp4', target: '_blank'}
+      %i.fa.fa-cloud-download
+      下载视频
+  %video{controls: true, width: '100%'}
+    %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.mp4", type: 'video/mp4'}
+    %source{src: "http://tinysou-cdn.b0.upaiyun.com/assets/videos/tinysou-basic-usage.webm", type: 'video/webm'}
+  %a.close-reveal-modal &#215;
 
 - content_for :onready do
   :plain
     $('li.nav-home').addClass('active');
+    $('video').click(function(){this.paused?this.play():this.pause();});
