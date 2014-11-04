@@ -1,3 +1,5 @@
+require 'extensions/sitemap'
+
 activate :sprockets
 after_configuration do
   sprockets.append_path(File.join(root, 'vendor/assets/javascripts'))
@@ -22,8 +24,9 @@ end
 # Per-page layout changes:
 #
 # With no layout
-# page "/path/to/file.html", :layout => false
-#
+page 'robots.txt', layout: false
+page 'humans.txt', layout: false
+
 # With alternative layout
 # page "/path/to/file.html", :layout => :otherlayout
 #
@@ -70,7 +73,10 @@ configure :build do
   activate :minify_javascript
 
   # Enable cache buster
-  activate :asset_hash
+  activate :asset_hash, ignore: [/^fonts/]
+
+  # Generate sitemap after build
+  activate :sitemap_generator
 
   # Use relative URLs
   # activate :relative_assets
