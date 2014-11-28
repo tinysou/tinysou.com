@@ -22,7 +22,7 @@
   %link{:type => 'application/opensearchdescription+xml', :href => 'opensearch.xml', :title => '微搜索', :rel => 'search' }/
   %title= data.page.title || '微搜索'
   = stylesheet_link_tag 'application'
-  = stylesheet_link_tag '//tinysou-cdn.b0.upaiyun.com/tinysou.min.css'
+  = stylesheet_link_tag '//tinysou-cdn.b0.upaiyun.com/tinysou.css'
   = javascript_include_tag "modernizr"
 
   - if build?
@@ -58,7 +58,7 @@
 
   / Javascript
   = javascript_include_tag 'application'
-  = javascript_include_tag '//tinysou-cdn.b0.upaiyun.com/tinysou-nojquery.js'
+  = javascript_include_tag '//tinysou-cdn.b0.upaiyun.com/nojquery.tinysou.js'
 
   :javascript
     $(document).ready(function () {
