@@ -1,0 +1,132 @@
+---
+layout: false
+---
+
+!!!5
+%head
+  %meta{ :charset => 'utf-8' }/
+
+  -# Set the viewport width to device width for mobile
+  %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1.0' }
+  %meta{ name: 'keywords', content: 'TinySou,搜索,微信' }
+  %meta{ name: 'description', content: 'TinySou 微信公众号搜索' }
+  %meta{:content => 'True', :name => 'HandheldFriendly'}/
+  %meta{:content => '320', :name => 'MobileOptimized'}/
+  %meta{:content => 'yes', :name => 'apple-mobile-web-app-capable'}/
+  %meta{:content => 'black-translucent', :name => 'apple-mobile-web-app-status-bar-style'}/
+  %meta{:content => 'on', 'http-equiv' => 'cleartype'}/
+  %meta{:content => 'IE=edge,chrome=1', 'http-equiv' => 'X-UA-Compatible'}/
+  %title= 'TinySou'
+  = stylesheet_link_tag '//tinysou-cdn.b0.upaiyun.com/tinysou.css'
+  = javascript_include_tag "modernizr"
+  :css
+    body {
+      background-color: #38a4b2;
+    }
+    form {
+      width: 60%;
+      margin: 0 auto 1rem;
+      display: table;
+      white-space: nowrap;
+    }
+    input[type=text] {
+      padding: 0;
+      width: 65%;
+    }
+    input[type=submit] {
+      background-color: #ff902a;
+      padding: 0 1.5rem;
+      color: white;
+    }
+    input[type=submit]:hover {
+      background-color: #f57600;
+    }
+    input {
+      border: none;
+      display: table-cell;
+      display: inline;
+      font-size: 1.2rem;
+      height: 2.7rem !important;
+    }
+    h3, h1 {
+      color: white;
+    }
+    h3.title {
+      margin: 0;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    h1 {
+      margin-bottom: 10px;
+    }
+    a {
+      color: #22a8b9;
+    }
+    a:hover {
+      color: #1e94a4;
+    }
+    a:visited {
+      color: #427980;
+    }
+    #ts-results-container .ts-result {
+      margin-bottom: 5px;
+      padding-bottom: 5px;
+    }
+    .text-center {
+      text-align: center;
+    }
+    span.ts-snippet {
+      color: white;
+    }
+    #ts-results-container {
+      width: 80%;
+      background-color: white;
+      padding: 15px;
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .ts-metadata span.ts-snippet em {
+      color: #e48c21;
+      background-color: white;
+    }
+%body
+  .container
+    .text-center
+      %h1 微搜索
+      %h3 最好用的站内搜索引擎
+    %form.text-center
+      %input#ts-search-input{type: 'text'}
+      %input{type: 'submit', value: '搜索'}
+    #ts-results-container
+      暂无搜索结果
+  / Javascript
+  = javascript_include_tag '//tinysou-cdn.b0.upaiyun.com/zepto.tinysou.js'
+
+  :javascript
+    var customRenderActFunction = function(item) {
+      var out = '<p class="title">' + item['document']['title'] + '</p>';
+      out = out.concat('<p class="url">' + item['document']['sections'][0] + '</p>');
+      return out;
+    };
+    var option = {
+      engineKey: '97eaafba26b04d3cdeb9',
+      perPage: 5,
+      resultLimit: 5,
+      renderActFunction: customRenderActFunction,
+      resultContainingElement: '#ts-results-container',
+      renderStyle: 'inline'
+    };
+    (function(w,d,t,u,n,s,e){
+      s = d.createElement(t);
+      s.src = u;
+      s.async = 1;
+      w[n] = function(r){
+        w[n].opts = r;
+      };
+      e = d.getElementsByTagName(t)[0];
+      e.parentNode.insertBefore(s, e);
+    })(window,document,'script','//tinysou-cdn.b0.upaiyun.com/ts.js','_ts');
+    _ts(option);
+</html>
