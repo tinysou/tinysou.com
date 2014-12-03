@@ -20,9 +20,29 @@ nosearch: true
       .large-1.columns.medium-2.small-2.end
         %input.button.orange{type: 'submit', value: '搜索'}
     .row
-      .large-12.columns.video-img
+      .large-12.columns.video-btn.text-center
+        %br
         %a{:href => "#", :'data-reveal-id' => 'videoModal'}
-          =image_tag("video-img.png")
+          .fa.fa-5x.fa-play-circle.white-color
+      .large-12.columns
+        %ul.features.small-block-grid-2.large-block-grid-4
+          %li.text-center
+            %a{href: '/features.html#search'}
+              %i.fa.fa-search-plus.fa-5x
+              %p 全文搜索，实时索引
+          %li.text-center
+            %a{href: '/features.html#autocomplete'}
+              %i.fa.fa-terminal.fa-5x
+              %p 即输即搜，自动补全
+          %li.text-center
+            %a{href: '/features.html#analytics'}
+              %i.fa.fa-bar-chart.fa-5x
+              %p 搜索分析与可视化
+          %li.text-center
+            %a{href: '/features.html#service'}
+              %i.fa.fa-cubes.fa-5x
+              %p 快速，稳定，弹性
+
 .steps
   #search.step.wrap.white-bg
     .row
