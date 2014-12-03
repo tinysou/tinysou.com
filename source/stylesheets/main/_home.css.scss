@@ -3,13 +3,13 @@
   background-image: linear-gradient(to bottom, #1c8c9b 0, $primary 80%);
   border-bottom: solid 2px $gray-border;
 
-  .wrap {
-    padding-bottom: 0;
-  }
-
   h2 {
     color: white;
     font-weight: bolder;
+  }
+
+  .white-color:hover {
+    color: $gray-bg;
   }
 
   input {
@@ -24,7 +24,7 @@
   }
 
   .features {
-    margin-top: 70px;
+    margin-top: 30px;
 
     a {
       color: $gray-bg;
